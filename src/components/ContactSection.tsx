@@ -20,28 +20,36 @@ export const ContactSection = () => {
       label: "Email",
       value: "sofyanrajpoot567@gmail.com",
       href: "mailto:sofyanrajpoot567@gmail.com",
-      color: "neon-cyan"
+      bgColor: "bg-neon-cyan/20",
+      borderColor: "border-neon-cyan/30",
+      textColor: "text-neon-cyan"
     },
     {
       icon: Phone,
       label: "Phone",
       value: "0336-5052500",
       href: "tel:0336-5052500",
-      color: "neon-pink"
+      bgColor: "bg-neon-pink/20",
+      borderColor: "border-neon-pink/30",
+      textColor: "text-neon-pink"
     },
     {
       icon: Github,
       label: "GitHub",
       value: "Mohammad-Sofyan-Abdullah",
       href: "https://github.com/Mohammad-Sofyan-Abdullah",
-      color: "neon-purple"
+      bgColor: "bg-neon-purple/20",
+      borderColor: "border-neon-purple/30",
+      textColor: "text-neon-purple"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
       value: "mohd-sofyan-abdullah",
       href: "https://www.linkedin.com/in/mohd-sofyan-abdullah",
-      color: "neon-blue"
+      bgColor: "bg-neon-blue/20",
+      borderColor: "border-neon-blue/30",
+      textColor: "text-neon-blue"
     }
   ];
 
@@ -77,15 +85,17 @@ export const ContactSection = () => {
                   <a
                     key={contact.label}
                     href={contact.href}
-                    className="flex items-center gap-4 p-4 rounded-lg border border-border/50 hover:border-primary/50 transition-cyber group"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-4 rounded-lg border border-border/50 hover:border-primary/50 transition-cyber group cursor-pointer relative z-10"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className={`p-3 rounded-lg bg-${contact.color}/20 border border-${contact.color}/30`}>
-                      <contact.icon className={`w-5 h-5 text-${contact.color} group-hover:animate-cyber-pulse`} />
+                    <div className={`p-3 rounded-lg ${contact.bgColor} border ${contact.borderColor}`}>
+                      <contact.icon className={`w-5 h-5 ${contact.textColor} group-hover:animate-cyber-pulse`} />
                     </div>
                     <div className="flex-1">
                       <div className="text-sm text-muted-foreground">{contact.label}</div>
-                      <div className={`font-medium text-${contact.color} group-hover:text-${contact.color} transition-cyber`}>
+                      <div className={`font-medium ${contact.textColor} group-hover:${contact.textColor} transition-cyber`}>
                         {contact.value}
                       </div>
                     </div>
@@ -134,16 +144,13 @@ export const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <Card className="cyber-card">
+          <Card className="cyber-card relative z-10">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-6 text-gradient">
                 Send Transmission
               </h3>
               <form 
                 className="space-y-6"
-                action={`mailto:sofyanrajpoot567@gmail.com`}
-                method="post"
-                encType="text/plain"
                 onSubmit={(e) => {
                   e.preventDefault();
                   const formData = new FormData(e.target as HTMLFormElement);
@@ -153,7 +160,7 @@ export const ContactSection = () => {
                   const message = formData.get('message');
                   
                   const mailtoLink = `mailto:sofyanrajpoot567@gmail.com?subject=${encodeURIComponent(subject as string)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
-                  window.location.href = mailtoLink;
+                  window.open(mailtoLink, '_blank');
                 }}
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -164,7 +171,7 @@ export const ContactSection = () => {
                     <Input 
                       name="name"
                       placeholder="Enter your name"
-                      className="bg-background/50 border-border/50 focus:border-neon-cyan/50 transition-cyber"
+                      className="bg-background/50 border-border/50 focus:border-neon-cyan/50 transition-cyber relative z-10"
                       required
                     />
                   </div>
@@ -176,7 +183,7 @@ export const ContactSection = () => {
                       name="email"
                       type="email"
                       placeholder="your.email@domain.com"
-                      className="bg-background/50 border-border/50 focus:border-neon-cyan/50 transition-cyber"
+                      className="bg-background/50 border-border/50 focus:border-neon-cyan/50 transition-cyber relative z-10"
                       required
                     />
                   </div>
@@ -189,7 +196,7 @@ export const ContactSection = () => {
                   <Input 
                     name="subject"
                     placeholder="Project collaboration opportunity"
-                    className="bg-background/50 border-border/50 focus:border-neon-cyan/50 transition-cyber"
+                    className="bg-background/50 border-border/50 focus:border-neon-cyan/50 transition-cyber relative z-10"
                     required
                   />
                 </div>
@@ -202,7 +209,7 @@ export const ContactSection = () => {
                     name="message"
                     placeholder="Describe your project requirements and how we can collaborate..."
                     rows={6}
-                    className="bg-background/50 border-border/50 focus:border-neon-cyan/50 transition-cyber resize-none"
+                    className="bg-background/50 border-border/50 focus:border-neon-cyan/50 transition-cyber resize-none relative z-10"
                     required
                   />
                 </div>
@@ -210,7 +217,7 @@ export const ContactSection = () => {
                 <Button 
                   type="submit"
                   size="lg" 
-                  className="w-full bg-gradient-cyber hover:shadow-neon-cyan transition-glow text-lg py-6"
+                  className="w-full bg-gradient-cyber hover:shadow-neon-cyan transition-glow text-lg py-6 relative z-10 cursor-pointer"
                 >
                   <Send className="w-5 h-5 mr-2" />
                   Transmit Message

@@ -67,7 +67,7 @@ export const ProjectsSection = () => {
     }
   ];
 
-  const categories = ["All", "AI/ML", "Computer Vision", "NLP", "Data Science"];
+  const categories = [];
 
   return (
     <section id="projects" className="py-20 px-6 relative overflow-hidden">
@@ -180,18 +180,18 @@ export const ProjectsSection = () => {
           <div className="space-y-8">
             {[
               {
+                title: "AI Development Intern",
+                company: "National Center of Artificial Intelligence",
+                period: "July 2025 – Present",
+                description: "Developing end-to-end medical applications using advanced AI models and machine learning techniques for healthcare solutions.",
+                color: "neon-green"
+              },
+              {
                 title: "Data Scientist",
                 company: "Data Forge",
                 period: "May 2025 – Present",
                 description: "Developed DSaaS platform enabling AI engineers to automate data lifecycle with agentic workflows and RAG-based models.",
                 color: "neon-cyan"
-              },
-              {
-                title: "AI Development Intern",
-                company: "National Center of Artificial Intelligence",
-                period: "Jan 2024 – Apr 2024",
-                description: "Developing end-to-end medical applications using advanced AI models and machine learning techniques for healthcare solutions.",
-                color: "neon-green"
               },
               {
                 title: "Data Analyst",
