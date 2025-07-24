@@ -32,15 +32,15 @@ export const ContactSection = () => {
     {
       icon: Github,
       label: "GitHub",
-      value: "sofyan-abdullah",
-      href: "https://github.com/sofyan-abdullah",
+      value: "Mohammad-Sofyan-Abdullah",
+      href: "https://github.com/Mohammad-Sofyan-Abdullah",
       color: "neon-purple"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "sofyan-abdullah",
-      href: "https://linkedin.com/in/sofyan-abdullah",
+      value: "mohd-sofyan-abdullah",
+      href: "https://www.linkedin.com/in/mohd-sofyan-abdullah",
       color: "neon-blue"
     }
   ];
@@ -139,15 +139,33 @@ export const ContactSection = () => {
               <h3 className="text-2xl font-bold mb-6 text-gradient">
                 Send Transmission
               </h3>
-              <form className="space-y-6">
+              <form 
+                className="space-y-6"
+                action={`mailto:sofyanrajpoot567@gmail.com`}
+                method="post"
+                encType="text/plain"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const formData = new FormData(e.target as HTMLFormElement);
+                  const name = formData.get('name');
+                  const email = formData.get('email');
+                  const subject = formData.get('subject');
+                  const message = formData.get('message');
+                  
+                  const mailtoLink = `mailto:sofyanrajpoot567@gmail.com?subject=${encodeURIComponent(subject as string)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
+                  window.location.href = mailtoLink;
+                }}
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="text-sm font-medium text-muted-foreground mb-2 block">
                       Name
                     </label>
                     <Input 
+                      name="name"
                       placeholder="Enter your name"
                       className="bg-background/50 border-border/50 focus:border-neon-cyan/50 transition-cyber"
+                      required
                     />
                   </div>
                   <div>
@@ -155,9 +173,11 @@ export const ContactSection = () => {
                       Email
                     </label>
                     <Input 
+                      name="email"
                       type="email"
                       placeholder="your.email@domain.com"
                       className="bg-background/50 border-border/50 focus:border-neon-cyan/50 transition-cyber"
+                      required
                     />
                   </div>
                 </div>
@@ -167,8 +187,10 @@ export const ContactSection = () => {
                     Subject
                   </label>
                   <Input 
+                    name="subject"
                     placeholder="Project collaboration opportunity"
                     className="bg-background/50 border-border/50 focus:border-neon-cyan/50 transition-cyber"
+                    required
                   />
                 </div>
                 
@@ -177,13 +199,16 @@ export const ContactSection = () => {
                     Message
                   </label>
                   <Textarea 
+                    name="message"
                     placeholder="Describe your project requirements and how we can collaborate..."
                     rows={6}
                     className="bg-background/50 border-border/50 focus:border-neon-cyan/50 transition-cyber resize-none"
+                    required
                   />
                 </div>
                 
                 <Button 
+                  type="submit"
                   size="lg" 
                   className="w-full bg-gradient-cyber hover:shadow-neon-cyan transition-glow text-lg py-6"
                 >

@@ -47,6 +47,7 @@ export const Navigation = () => {
             <Button 
               variant="outline" 
               className="border-neon-pink text-neon-pink hover:bg-neon-pink/10 transition-cyber"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Hire Me
             </Button>
@@ -81,6 +82,10 @@ export const Navigation = () => {
               <Button 
                 variant="outline" 
                 className="border-neon-pink text-neon-pink hover:bg-neon-pink/10 transition-cyber mt-2"
+                onClick={() => {
+                  setIsOpen(false);
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 Hire Me
               </Button>

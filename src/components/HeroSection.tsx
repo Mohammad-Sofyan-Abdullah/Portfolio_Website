@@ -108,6 +108,7 @@ export const HeroSection = () => {
           <Button 
             size="lg" 
             className="bg-gradient-cyber hover:shadow-neon-pink transition-glow px-8 py-3 text-lg font-semibold"
+            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Explore Projects
           </Button>

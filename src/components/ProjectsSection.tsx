@@ -18,9 +18,9 @@ export const ProjectsSection = () => {
   const projects = [
     {
       icon: Search,
-      title: "Scholarship Finder",
-      description: "AI-powered scholarship discovery system using web search, document QA, and memory for end-to-end application pipeline with real-time email notifications.",
-      tech: ["Generative AI", "FastAPI", "Grok", "Tevily", "Langchain", "Firebase"],
+      title: "Medical ChatBot Assistant",
+      description: "End-to-end medical AI assistant using MedGemma 27B model with complete pipeline featuring real-time audio-to-text via Whisper v3 Large and text-to-speech capabilities for seamless medical consultations.",
+      tech: ["MedGemma 27B", "Whisper v3", "TTS", "FastAPI", "WebRTC", "PyTorch"],
       category: "AI/ML",
       color: "neon-cyan",
       featured: true
@@ -185,6 +185,13 @@ export const ProjectsSection = () => {
                 period: "May 2025 – Present",
                 description: "Developed DSaaS platform enabling AI engineers to automate data lifecycle with agentic workflows and RAG-based models.",
                 color: "neon-cyan"
+              },
+              {
+                title: "AI Development Intern",
+                company: "National Center of Artificial Intelligence",
+                period: "Jan 2024 – Apr 2024",
+                description: "Developing end-to-end medical applications using advanced AI models and machine learning techniques for healthcare solutions.",
+                color: "neon-green"
               },
               {
                 title: "Data Analyst",
