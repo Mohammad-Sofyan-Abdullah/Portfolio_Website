@@ -59,7 +59,7 @@ npm start
 
 ## 🌐 Live Demo
 
-👉 [Vercel App Deployement]([https://yourdomain.netlify.app](https://portfolio-website-navy-five.vercel.app/)) (Replace with your URL)
+👉 [Vercel App Deployement]((https://portfolio-website-navy-five.vercel.app/))
 
 ---
 
