@@ -1,5 +1,3 @@
-### ✅ `README.md` for Portfolio
-
 ```markdown
 # 💻 Cyber_VAULT — Developer Portfolio
 
