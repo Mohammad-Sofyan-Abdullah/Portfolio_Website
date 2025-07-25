@@ -59,7 +59,7 @@ npm start
 
 ## 🌐 Live Demo
 
-👉 [https://yourdomain.netlify.app](https://yourdomain.netlify.app) (Replace with your URL)
+👉 [https://yourdomain.netlify.app]([https://yourdomain.netlify.app](https://portfolio-website-navy-five.vercel.app/)) (Replace with your URL)
 
 ---
 
