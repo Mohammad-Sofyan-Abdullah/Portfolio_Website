@@ -59,7 +59,7 @@ npm start
 
 ## 🌐 Live Demo
 
-👉 [Vercel App Deployement]((https://portfolio-website-navy-five.vercel.app/))
+👉 [Live Website](https://portfolio-website-navy-five.vercel.app/)
 
 ---
 
