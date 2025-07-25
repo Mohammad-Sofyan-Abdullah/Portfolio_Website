@@ -27,14 +27,14 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Credit */}
+          {/* Credit
           <div className="flex items-center gap-2 text-muted-foreground text-sm">
             <span>Crafted with</span>
             <Heart className="w-4 h-4 text-neon-pink animate-cyber-pulse" />
             <span>and</span>
             <Code className="w-4 h-4 text-neon-cyan animate-cyber-pulse" />
             <span>by Mohammad Sofyan Abdullah</span>
-          </div>
+          </div> */}
 
           {/* Copyright */}
           <div className="text-center text-sm text-muted-foreground">
