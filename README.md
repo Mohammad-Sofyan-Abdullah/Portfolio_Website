@@ -1,4 +1,3 @@
-```markdown
 # 💻 Cyber_VAULT — Developer Portfolio
 
 A futuristic cyberpunk-inspired portfolio built with **React**, **TailwindCSS**, and animated using modern frontend effects. Showcasing projects, skills, and contact information in an immersive, neon-brushed interface.
@@ -32,7 +31,7 @@ A futuristic cyberpunk-inspired portfolio built with **React**, **TailwindCSS**,
 
 ## 🔧 Setup Instructions
 
-```bash
+
 # 1. Clone the repository
 git clone https://github.com/Mohammad-Sofyan-Abdullah/Portfolio_Website.git
 cd Portfolio_Website
@@ -44,7 +43,7 @@ npm install
 npm run dev
 # or
 npm start
-````
+
 
 ---
 
