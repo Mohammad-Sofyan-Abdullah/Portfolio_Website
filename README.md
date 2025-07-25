@@ -2,7 +2,8 @@
 
 A futuristic cyberpunk-inspired portfolio built with **React**, **TailwindCSS**, and animated using modern frontend effects. Showcasing projects, skills, and contact information in an immersive, neon-brushed interface.
 
-![Hero Screenshot](./screenshot-hero.png)
+<img width="1512" height="871" alt="image" src="https://github.com/user-attachments/assets/ad0521dc-641a-4c75-adf0-2564300fb6b4" />
+
 
 ---
 
@@ -24,7 +25,6 @@ A futuristic cyberpunk-inspired portfolio built with **React**, **TailwindCSS**,
 - 🎨 Tailwind CSS
 - 🧩 Lucide Icons
 - 🎞️ Custom Animations (CSS)
-- 🌐 Deployed via GitHub Pages / Netlify / Vercel
 
 ---
 
